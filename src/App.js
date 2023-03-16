@@ -1,24 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Navbar from './components/navbar/Navbar';
+import { Windmill } from '@windmill/react-ui'
+import EditView from './views/EditView';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Windmill>
+    <div className=" bg-bgColor h-[100%] min-w-[100vw] box-border">
+     <Navbar/>
+     <EditView/>
     </div>
+    </Windmill>
   );
 }
 
